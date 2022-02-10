@@ -29,9 +29,8 @@ static void set_approval_for_all_ui(ethQueryContractUI_t *msg, erc1155_context_t
         case 2:
             strlcpy(msg->title, "NFT Address", msg->titleLength);
             // In case of no PROVIDE_NFT_INFO, we already have the address from the SET_PLUGIN
-            nft_addr = ((msg->item1) ?
-                        ((uint8_t *) msg->item1->nft.contractAddress) :
-                        msg->pluginSharedRO->txContent->destination);
+            nft_addr = ((msg->item1) ? ((uint8_t *) msg->item1->nft.contractAddress)
+                                     : msg->pluginSharedRO->txContent->destination);
             getEthDisplayableAddress(nft_addr,
                                      msg->msg,
                                      msg->msgLength,
@@ -68,9 +67,8 @@ static void set_transfer_ui(ethQueryContractUI_t *msg, erc1155_context_t *contex
         case 2:
             strlcpy(msg->title, "NFT Address", msg->titleLength);
             // In case of no PROVIDE_NFT_INFO, we already have the address from the SET_PLUGIN
-            nft_addr = ((msg->item1) ?
-                        ((uint8_t *) msg->item1->nft.contractAddress) :
-                        msg->pluginSharedRO->txContent->destination);
+            nft_addr = ((msg->item1) ? ((uint8_t *) msg->item1->nft.contractAddress)
+                                     : msg->pluginSharedRO->txContent->destination);
             getEthDisplayableAddress(nft_addr,
                                      msg->msg,
                                      msg->msgLength,
@@ -119,9 +117,8 @@ static void set_batch_transfer_ui(ethQueryContractUI_t *msg, erc1155_context_t *
         case 2:
             strlcpy(msg->title, "NFT Address", msg->titleLength);
             // In case of no PROVIDE_NFT_INFO, we already have the address from the SET_PLUGIN
-            nft_addr = ((msg->item1) ?
-                        ((uint8_t *) msg->item1->nft.contractAddress) :
-                        msg->pluginSharedRO->txContent->destination);
+            nft_addr = ((msg->item1) ? ((uint8_t *) msg->item1->nft.contractAddress)
+                                     : msg->pluginSharedRO->txContent->destination);
             getEthDisplayableAddress(nft_addr,
                                      msg->msg,
                                      msg->msgLength,
