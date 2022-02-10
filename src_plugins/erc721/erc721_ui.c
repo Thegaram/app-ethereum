@@ -41,14 +41,6 @@ static void set_approval_ui(ethQueryContractUI_t *msg, erc721_context_t *context
                                msg->msg,
                                msg->msgLength);
             break;
-        case 4:
-            strlcpy(msg->title, "And send", msg->titleLength);
-            amountToString((uint8_t *) &msg->pluginSharedRO->txContent->value,
-                           sizeof(msg->pluginSharedRO->txContent->value),
-                           WEI_TO_ETHER,
-                           msg->network_ticker,
-                           msg->msg,
-                           msg->msgLength);
         default:
             PRINTF("Unsupported screen index %d\n", msg->screenIndex);
             msg->result = ETH_PLUGIN_RESULT_ERROR;
@@ -92,14 +84,6 @@ static void set_approval_for_all_ui(ethQueryContractUI_t *msg, erc721_context_t 
                                      &global_sha3,
                                      chainConfig->chainId);
             break;
-        case 3:
-            strlcpy(msg->title, "And send", msg->titleLength);
-            amountToString((uint8_t *) &msg->pluginSharedRO->txContent->value,
-                           sizeof(msg->pluginSharedRO->txContent->value),
-                           WEI_TO_ETHER,
-                           msg->network_ticker,
-                           msg->msg,
-                           msg->msgLength);
         default:
             PRINTF("Unsupported screen index %d\n", msg->screenIndex);
             msg->result = ETH_PLUGIN_RESULT_ERROR;
@@ -146,14 +130,6 @@ static void set_transfer_ui(ethQueryContractUI_t *msg, erc721_context_t *context
                                msg->msg,
                                msg->msgLength);
             break;
-        case 4:
-            strlcpy(msg->title, "And send", msg->titleLength);
-            amountToString((uint8_t *) &msg->pluginSharedRO->txContent->value,
-                           sizeof(msg->pluginSharedRO->txContent->value),
-                           WEI_TO_ETHER,
-                           msg->network_ticker,
-                           msg->msg,
-                           msg->msgLength);
         default:
             PRINTF("Unsupported screen index %d\n", msg->screenIndex);
             msg->result = ETH_PLUGIN_RESULT_ERROR;
